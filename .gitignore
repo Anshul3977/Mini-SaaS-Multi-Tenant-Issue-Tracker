@@ -1,0 +1,12 @@
+node_modules
+dist
+.env
+.next
+.swc
+*.log
+.DS_Store
+coverage
+build
+apps/api/dist
+apps/web/.next
+apps/web/out
