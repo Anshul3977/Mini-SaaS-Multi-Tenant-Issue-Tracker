@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
     const response = NextResponse.json({ success: true, message: "Session created" });
 
     response.cookies.set("trackflow_token", token, {
-        httpOnly: true,
+        httpOnly: false,
         secure: process.env.NODE_ENV === "production",
         sameSite: "lax",
         path: "/",
@@ -35,7 +35,7 @@ export async function DELETE() {
     const response = NextResponse.json({ success: true, message: "Session cleared" });
 
     response.cookies.set("trackflow_token", "", {
-        httpOnly: true,
+        httpOnly: false,
         secure: process.env.NODE_ENV === "production",
         sameSite: "lax",
         path: "/",
